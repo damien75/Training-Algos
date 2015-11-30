@@ -15,7 +15,7 @@ def minDiffCut(graph, weights , vertex):
     visited = set()
     bestDiff = total
     toVisit = [vertex]
-    toVisitSet = set()
+    toVisitSet = set() #Adding this set instead of just having the toVisit list increases speed drastically when checking if next_vtx has already been seen and is in the toVisit
     toVisitSet.add(vertex)
     subTotals = {vertex : weights[vertex] for vertex in graph.keys()}
     while len(toVisit) > 0:
@@ -36,12 +36,18 @@ def minDiffCut(graph, weights , vertex):
             bestDiff = min(bestDiff, abs(2*subTotals[currVertex] - total))
     return bestDiff
 
-nbNodes = input()
+#Lines to get the input from Hackerrank
+"""nbNodes = input()
 weights = map(int , raw_input().split())
 tree = {i : [] for i in range(nbNodes)}
 for _ in range(nbNodes - 1):
     parent , child = map(int , raw_input().split())
     tree[parent - 1].append(child - 1)
-    tree[child - 1].append(parent - 1)
+    tree[child - 1].append(parent - 1)"""
+
+#Custom input
+nbNodes = 6
+weights = [100 , 200 , 100 , 500 , 100 , 600]
+tree = {0 : [1] , 1 : [0 , 2 , 4] , 2 : [3] , 3 : [4] , 4 : [1 , 3 , 5] , 5 : [4]}
 
 print minDiffCut(tree , weights , 0)
