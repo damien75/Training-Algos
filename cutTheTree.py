@@ -1,4 +1,4 @@
-#source Hackerrank / Algorithms / Search
+#source Hackerrank / Algorithms / Search / Cut the Tree
 
 #input: tree with weights
 
