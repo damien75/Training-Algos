@@ -1,4 +1,4 @@
-#Source Hackerrank / Algorithms / Implementation
+#Source Hackerrank / Algorithms / Implementation / Grid Search
 
 #input: 2 grids: one small and one bigger
 
