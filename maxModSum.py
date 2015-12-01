@@ -52,19 +52,52 @@ class BST:
         else:
             return self.findNext(key , currentNode.rightChild)
 
+    def invariant(self , node , key):
+        if not node:
+            return None
+        elif key + 1 == node.key:
+            return "this"
+        elif key + 1 < node.key:
+            return "left"
+        else:
+            return "right"
+
+    def findNextIterative(self , key): #return key + 1 or bigger
+        node = self.root
+        if not node:
+            return None
+        inv = self.invariant(node , key)
+        nodes = [key]
+        while inv:
+            nodes.append(node.key)
+            if inv == "this":
+                break
+            elif inv == "left":
+                node = node.leftChild
+                inv = self.invariant(node , key)
+            else:
+                node = node.rightChild
+                inv = self.invariant(node , key)
+        nodes = sorted(nodes)
+        if nodes[-1] == key:
+            return None
+        else:
+            return nodes[nodes.index(key) + 1]
+
 def maxSumModulo(ar , M):
     if len(ar) == 0:
         return 0
     else:
         prefix = [0]*len(ar)
-        bestSum = prefix[0]
+        bestSum = prefix[0] % M
         tree = BST()
         for i in range(len(ar)):
             if i > 0:
                 prefix[i] = (prefix[i-1] + ar[i]) % M
             else:
-                prefix[i] = ar[0] % M
+                prefix[i] = ar[i] % M
             maxSum = prefix[i]
+            #prevSum = tree.findNextIterative(prefix[i])
             prevSum = tree.findNext(prefix[i] , tree.root) # finds the "next", aka smallest, number bigger than the argument
             if prevSum:
                 maxSum = (prefix[i] - prevSum.key) % M
@@ -93,13 +126,13 @@ for _ in range(t):
     print maxSumModulo(ar , M)"""
 
 if __name__ == "__main__":
-    import time , timeit
-    t = timeit.Timer('solveFromCustomInput()', 'from __main__ import solveFromCustomInput')
-    print t.timeit(number=1)
+    import time
 
-    """result = solveFromCustomInput()
+    start = time.time()
+    result = solveFromCustomInput()
     with open("maxSum output1.txt") as f:
         success = True
         for i in range(len(result)):
             success &= int(f.readline()) == result[i]
-        print success"""
+        print success
+    print "Execution time:" , time.time() - start
