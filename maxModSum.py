@@ -21,9 +21,6 @@ class BST:
         def hasRightChild(self):
             return self.rightChild
 
-        def isLeftChild(self):
-            return self.parent and self.parent.leftChild == self
-
     def __init__(self):
         self.root = None
 
@@ -45,99 +42,35 @@ class BST:
             else:
                    currentNode.rightChild = self.TreeNode(key , parent=currentNode)
 
-    def findNodeOrNext(self , key , currentNode):
-        if key < currentNode.key:
-            if currentNode.hasLeftChild() and key < self.findMax(currentNode).key:
-                   return self.findNodeOrNext(key , currentNode.leftChild)
-            else:
-                   return currentNode
-        elif key == currentNode.key:
-            return currentNode
-        else:
-            if currentNode.hasRightChild():
-                   return self.findNodeOrNext(key , currentNode.rightChild)
-            else:
-                   return currentNode
-
-    def get(self,key):
-        if self.root:
-            res = self._get(key,self.root)
-            if res:
-                  return res.payload
-            else:
-                  return None
-        else:
-            return None
-
-    def _get(self , key , currentNode):
+    def findNext(self , key , currentNode): #return key + 1 or bigger
         if not currentNode:
             return None
-        elif currentNode.key == key:
+        elif key + 1 == currentNode.key:
             return currentNode
-        elif key < currentNode.key:
-            return self._get(key,currentNode.leftChild)
+        elif key + 1 < currentNode.key:
+            return self.findNext(key , currentNode.leftChild) or currentNode
         else:
-            return self._get(key,currentNode.rightChild)
-
-    def __getitem__(self,key):
-         return self.get(key)
-
-    def __contains__(self,key):
-         return self._get(key , self.root)
-
-    def findNext(self , value):
-        succ = None
-        if not self.root: #if tree empty then return
-            return succ
-        else:
-            currMax = self.findMax(self.root).key
-            if value > currMax: #if we try to find the next value for a value already > max of the tree, return
-                return succ
-            else:
-                node = self.findNodeOrNext(value , self.root) #get the node of the tree right after the given value
-                if node.key > value:
-                    return node
-                else:
-                    if node.hasRightChild():
-                        succ = self.findMin(node.rightChild)
-                    else:
-                        if node.parent:
-                            if node.isLeftChild():
-                                succ = node.parent
-                            else:
-                                node.parent.rightChild = None
-                                succ = self.findNext(node.parent.key)
-                                node.parent.rightChild = node
-                    return succ
-
-    def findMin(self , fromNode):
-        current = self._get(fromNode.key , self.root)
-        while current.hasLeftChild():
-            current = current.leftChild
-        return current
-
-    def findMax(self , fromNode):
-        current = self._get(fromNode.key , self.root)
-        while current.hasRightChild():
-            current = current.rightChild
-        return current
+            return self.findNext(key , currentNode.rightChild)
 
 def maxSumModulo(ar , M):
     if len(ar) == 0:
         return 0
     else:
         prefix = [0]*len(ar)
-        prefix[0] = ar[0] % M
         bestSum = prefix[0]
         tree = BST()
         for i in range(len(ar)):
             if i > 0:
                 prefix[i] = (prefix[i-1] + ar[i]) % M
+            else:
+                prefix[i] = ar[0] % M
             maxSum = prefix[i]
-            prevSum = tree.findNext(prefix[i]) # finds the "next", aka smallest, number bigger than the argument
+            prevSum = tree.findNext(prefix[i] , tree.root) # finds the "next", aka smallest, number bigger than the argument
             if prevSum:
                 maxSum = (prefix[i] - prevSum.key) % M
             bestSum = max(bestSum, maxSum)
+            if bestSum == M - 1:
+                break
             tree.insert(prefix[i])
         return bestSum
 
@@ -160,14 +93,13 @@ for _ in range(t):
     print maxSumModulo(ar , M)"""
 
 if __name__ == "__main__":
-    #import timeit
-    #t = timeit.Timer('solveFromCustomInput()', 'from __main__ import solveFromCustomInput')
+    import time , timeit
+    t = timeit.Timer('solveFromCustomInput()', 'from __main__ import solveFromCustomInput')
+    print t.timeit(number=1)
 
-    result = solveFromCustomInput()
-    print result
+    """result = solveFromCustomInput()
     with open("maxSum output1.txt") as f:
         success = True
         for i in range(len(result)):
             success &= int(f.readline()) == result[i]
-        print success
-    #print t.timeit(number=1)
+        print success"""
