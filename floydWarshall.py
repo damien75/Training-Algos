@@ -25,32 +25,32 @@ class Floyd:
         self.graph = graph
 
     def shortestDistance(self):
-        n = len(self.graph.keys())
+        n = len(self.graph)
         A = [[[None for _ in range(n + 1)] for _ in range(n)] for _ in range(n)]
-        for i in range(1 , n + 1):
+        for i in range(n):
             v1 = self.graph[i]
-            A1 = A[i - 1]
-            for j in range(1 , n + 1):
+            A1 = A[i]
+            for j in range(n):
                 if i == j:
-                    A1[j - 1][0] = 0
-                elif v1[j] != None:
-                    A1[j - 1][0] = v1[j]
+                    A1[j][0] = 0
+                elif v1[j] is not None:
+                    A1[j][0] = v1[j]
 
         for k in range(1 , n + 1):
             v1 = A[k - 1]
-            for i in range(1 , n + 1):
-                v2 = A[i - 1]
-                if v2[k - 1] == None:
+            for i in range(n):
+                v2 = A[i]
+                if v2[k - 1] is None:
                     continue
                 cost1 = v2[k - 1][k - 1]
-                for j in range(1 , n + 1):
-                    if v1[j - 1] == None:
+                for j in range(n):
+                    if v1[j] is None:
                         continue
-                    v3 = v2[j - 1]
+                    v3 = v2[j]
                     cost2 = v3[k - 1]
-                    cost3 = v1[j - 1][k - 1]
-                    b1 = cost2 != None
-                    b2 = cost1 != None and cost3 != None
+                    cost3 = v1[j][k - 1]
+                    b1 = cost2 is not None
+                    b2 = cost1 is not None and cost3 is not None
                     if b1 and b2:
                         v3[k] = min(cost2 , cost1 + cost3)
                     elif b1:
@@ -58,10 +58,12 @@ class Floyd:
                     elif b2:
                         v3[k] = cost1 + cost3
 
+        #print len(A) , len(A[0]) , len(A[0][0])
+        #print A
         self.A = A
 
     def shortestDistanceBetween(self , fromVertex , toVertex):
-        return self.A[fromVertex - 1][toVertex - 1][-1]
+        return self.A[fromVertex][toVertex][-1]
 
 #Read input from Hackerrank
 """n , m = map(int , raw_input().split())
@@ -84,17 +86,14 @@ if __name__ == "__main__":
 
     n = 4
     m = 5
-    edges = {1 : {1 : None , 2 : 5 , 3 : None , 4 : 24} ,
-    2 : {1 : None , 2 : None , 3 : None , 4 : 6} ,
-    3 : {1 : None , 2 : 7 , 3 : None , 4 : 4} ,
-    4 : {1 : None , 2 : None , 3 : None , 4 : None}}
+    edges = [[None , 5 , None , 24] , [None , None , None , 6] , [None , 7 , None , 4] , [None , None , None , None]]
     flo = Floyd(edges)
     flo.shortestDistance()
     q = 3
     fromTo = [(1 , 2) , (3 , 1) , (1 , 4)]
     for i in range(q):
         fromVertex , toVertex = fromTo[i]
-        print flo.shortestDistanceBetween(fromVertex , toVertex) or -1
+        print flo.shortestDistanceBetween(fromVertex - 1 , toVertex - 1) or -1
 
     start = time.time()
 
@@ -102,17 +101,17 @@ if __name__ == "__main__":
 
     with open('floydWarshallInput.txt') as f:
         n , m = map(int , f.readline().split())
-        edges = {i : {j : None for j in range(1 , n + 1)} for i in range(1 , n + 1)}
+        edges = [[None for _ in range(n)] for _ in range(n)]
         for _ in range(m):
             tail , head , weight = map(int , f.readline().split())
-            edges[tail][head] = weight
+            edges[tail - 1][head - 1] = weight
 
         flo = Floyd(edges)
         flo.shortestDistance()
         q = int(f.readline())
         for _ in range(q):
             fromVertex , toVertex = map(int , f.readline().split())
-            results.append(flo.shortestDistanceBetween(fromVertex , toVertex) or -1)
+            results.append(flo.shortestDistanceBetween(fromVertex - 1 , toVertex - 1) or -1)
 
     print "Execution time:" , time.time() - start
 
