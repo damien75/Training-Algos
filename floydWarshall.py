@@ -10,52 +10,26 @@
 #At the beginning, A[i][j] = None if no edge i -> j, 0 if i == j , cost if there is an edge
 #Then for k = 1..n, A[i][j] = min(A[i][j] , A[i][k] + A[k][j])
 
-"""Tricks to improve python speed:
-1) Use list of lists instead if dictionary.
-2) Use None as infinity for 'early break'.
-3) Use additional variables for inner lists to reduce the number of 'access by index' calls.
-Something like this:
-for v2 in vertices:
-    tv2 = d[v2]
-    for v1 in vertices:
-        if d[v1][v2] is None: continue
-        tv1= d[v1]
-        for v3 in vertices:
-            if tv2[v3] is None: continue
-            ..."""
-
 class Floyd:
-    def __init__(self , graph):
+    def __init__(self , graph , n):
         self.graph = graph
+        self.n = n
 
     def shortestDistance(self):
-        n = len(self.graph)
-        A = [[None for _ in range(n)] for _ in range(n)]
-        for i in range(n):
-            v1 = self.graph[i]
-            A1 = A[i]
-            for j in range(n):
-                if i == j:
-                    A1[j] = 0
-                elif v1[j] is not None:
-                    A1[j] = v1[j]
-        for k in range(n):
-            middle = A[k]
-            for i in range(n):
-                fromVertex = A[i]
-                cost1 = fromVertex[k] #best cost to go from initial vertex to middle vertex
-                if cost1 is None: #then impossible to go from vertex i to middle vertex k
+        for k in range(self.n):
+            middle = self.graph[k]
+            for i in range(self.n):
+                if self.graph[i][k] is None: #then impossible to go from vertex i to middle vertex k
                     continue
-                for j in range(n):
-                    cost3 = middle[j] #best cost to go from middle vertex to end vertex
-                    if cost3 is None: #impossible to go from middle vertex to end vertex
+                fromVertex = self.graph[i]
+                cost1 = fromVertex[k] #best cost to go from initial vertex to middle vertex
+                for j in range(self.n):
+                    if middle[j] is None: #impossible to go from middle vertex to end vertex
                         continue
-                    fromVertex[j] = min(fromVertex[j] , cost1 + cost3) or cost1 + cost3
-
-        self.A = A
+                    fromVertex[j] = min(fromVertex[j] , cost1 + middle[j]) or cost1 + middle[j]
 
     def shortestDistanceBetween(self , fromVertex , toVertex):
-        return self.A[fromVertex][toVertex]
+        return self.graph[fromVertex][toVertex]
 
 #Read input from Hackerrank
 """n , m = map(int , raw_input().split())
@@ -64,7 +38,7 @@ for _ in range(m):
     tail , head , weight = map(int , raw_input().split())
     edges[tail - 1][head - 1] = weight
 
-flo = Floyd(edges)
+flo = Floyd(edges , n)
 flo.shortestDistance()
 q = input()
 for _ in range(q):
@@ -78,8 +52,8 @@ if __name__ == "__main__":
 
     n = 4
     m = 5
-    edges = [[None , 5 , None , 24] , [None , None , None , 6] , [None , 7 , None , 4] , [None , None , None , None]]
-    flo = Floyd(edges)
+    edges = [[0 , 5 , None , 24] , [None , 0 , None , 6] , [None , 7 , 0 , 4] , [None , None , None , 0]]
+    flo = Floyd(edges , n)
     flo.shortestDistance()
     q = 3
     fromTo = [(1 , 2) , (3 , 1) , (1 , 4)]
@@ -93,12 +67,15 @@ if __name__ == "__main__":
 
     with open('floydWarshallInput.txt') as f:
         n , m = map(int , f.readline().split())
+        #edges = [[None]*n]*n is slower
         edges = [[None for _ in range(n)] for _ in range(n)]
         for _ in range(m):
             tail , head , weight = map(int , f.readline().split())
             edges[tail - 1][head - 1] = weight
+        for i in range(n):
+            edges[i][i] = 0
 
-        flo = Floyd(edges)
+        flo = Floyd(edges , n)
         flo.shortestDistance()
         q = int(f.readline())
         for _ in range(q):
