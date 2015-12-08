@@ -88,7 +88,7 @@ def maxSumModulo(ar , M):
     if len(ar) == 0:
         return 0
     else:
-        prefix = [0]*len(ar)
+        prefix = [0 for _ in range(len(ar))]
         bestSum = prefix[0] % M
         tree = BST()
         for i in range(len(ar)):
@@ -107,6 +107,35 @@ def maxSumModulo(ar , M):
             tree.insert(prefix[i])
         return bestSum
 
+def findSmallestGreaterThan(nextNb , maxSum):
+    i = bisect.bisect_right(nextNb, maxSum)
+    prevSum = None
+    if i < len(nextNb):
+        prevSum = nextNb[i]
+    return prevSum
+
+def maxSumModuloWithoutTree(ar , M):
+    if len(ar) == 0:
+        return 0
+    else:
+        prefix = [0 for _ in range(len(ar))]
+        bestSum = prefix[0] % M
+        nextNb = []
+        for i in range(len(ar)):
+            if i > 0:
+                prefix[i] = (prefix[i-1] + ar[i]) % M
+            else:
+                prefix[i] = ar[i] % M
+            maxSum = prefix[i]
+            prevSum = findSmallestGreaterThan(nextNb , maxSum) # finds the "next", aka smallest, number bigger than the argument
+            if prevSum:
+                maxSum = (maxSum - prevSum) % M
+            bestSum = max(bestSum, maxSum)
+            if bestSum == M - 1:
+                break
+            bisect.insort(nextNb , prefix[i]) #insert the new prefix in the array bisection, which allows binary search more efficiently than BST
+        return bestSum
+
 def solveFromCustomInput():
     with open("maxSum test1.txt") as f:
         t = int(f.readline())
@@ -114,7 +143,7 @@ def solveFromCustomInput():
         for _ in range(t):
             n , M = map(int , f.readline().split())
             ar = map(int , f.readline().split())
-            result.append(maxSumModulo(ar , M))
+            result.append(maxSumModuloWithoutTree(ar , M))
 
     return result
 
@@ -126,7 +155,7 @@ for _ in range(t):
     print maxSumModulo(ar , M)"""
 
 if __name__ == "__main__":
-    import time
+    import time , bisect
 
     start = time.time()
     result = solveFromCustomInput()
