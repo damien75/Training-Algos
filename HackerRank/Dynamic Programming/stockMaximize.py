@@ -1,4 +1,4 @@
-#source Hackerrank / Algorithms / Dynamic Programming / The Coin Change Problem
+#source Hackerrank / Algorithms / Dynamic Programming / Stock Maximize
 
 #input: evolution of a stock in time (1 <= time <= n) for t test cases
 

@@ -1,4 +1,4 @@
-#Source Hackerrank / Algorithms / Strings
+#Source Hackerrank / Algorithms / Strings / Save Humanity
 
 #input: 2 strings
 
