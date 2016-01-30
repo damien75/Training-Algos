@@ -8,7 +8,7 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Dynamic Programming](HackerRank/Dynamic Programming/)  
   
   ••[Bricks Game](HackerRank/Dynamic Programming/bricksGame.py)  
-  ••[Candies](HackerRank/Dynamic Programming/Candies.py)  
+  ••[Candies](HackerRank/Dynamic Programming/candies.py)  
   ••[The Coin Change Problem](HackerRank/Dynamic Programming/coinChange.py)  
   ••[Floyd : City of Blinding Lights](HackerRank/Dynamic Programming/floydWarshall.py)  
   ••[Grid Walking](HackerRank/Dynamic Programming/gridWalking.py)  
@@ -21,7 +21,7 @@ The goal is to store this as ideas and to remember interesting observations from
   
   •[Graph Theory](HackerRank/Graph Theory/)
 
-  ••[Djikstra: Shortest Reach 2](HackerRank/Graph Theory/djikstraShortestPath.py)  
+  ••[Djikstra: Shortest Reach 2](HackerRank/Graph Theory/DjikstraShortestPath.py)  
   ••[Even Tree](HackerRank/Graph Theory/evenTree.py)  
   ••[Kruskal (MST): Really Special Subtree](HackerRank/Graph Theory/KruskalMST.py)  
   ••[Breadth First Search: Shortest Reach](HackerRank/Graph Theory/shortestReach.py)
@@ -34,14 +34,14 @@ The goal is to store this as ideas and to remember interesting observations from
   ••[3 Integers Sum Up To Target](HackerRank/Search/integersSumToTarget.py)  
   ••[Maximize Sum](HackerRank/Search/maxModSum.py)  
   ••[Missing Numbers](HackerRank/Search/missingNumbers.py)  
-  ••[Snakes And Ladders](snakesAndLadders.py)
+  ••[Snakes And Ladders](HackerRank/Search/snakesAndLadders.py)
 
   •[Sorting](HackerRank/Sorting/)
 
   ••[Bigger is Greater](HackerRank/Sorting/biggerIsGreater.py)  
   ••[Dutch Flag Problem](HackerRank/Sorting/dutchFlagProblem.py)  
-  ••[Radix Sort](HackerRank/Sorting/lsRadixSort.py)  
-  ••[Quick Sort](HackerRank/Sorting/quicksort.py)
+  ••[Radix Sort](HackerRank/Sorting/lsdRadixSort.py)  
+  ••[Quick Sort](HackerRank/Sorting/quickSort.py)
 
   •[Strings](HackerRank/Strings/)
 
