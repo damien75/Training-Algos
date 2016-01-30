@@ -34,7 +34,7 @@ def radixSort(originalList , n , maxLen):
     queue = originalList
     for x in range(maxLen):
         bins = [[] for i in range(n)]
-        for y in a:
+        for y in queue:
             bins[(y/10**x)%n].append(y)
         queue = []
         for section in bins:

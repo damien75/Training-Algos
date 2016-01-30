@@ -11,9 +11,10 @@
 #       expectedValue = max(expectedValue[i - 1][cap] , expectedValue[i][cap - values[i]] + values[i])
 
 class Knapsack:
-    def __init__(self , values , maxCapacity):
+    def __init__(self , values , weights , maxCapacity):
         self.A = []
         self.values = values
+        self.weights = weights
         self.W = maxCapacity
 
     def getExpectedValue(self):
@@ -28,7 +29,7 @@ class Knapsack:
                 if self.values[j] > cap:
                     self.A[i].append(self.A[i - 1][cap])
                 else:
-                    self.A[i].append(max(self.A[i - 1][cap] , self.A[i][cap - self.values[j]] + self.values[j]))
+                    self.A[i].append(max(self.A[i - 1][cap] , self.A[i][cap - self.weights[j]] + self.values[j]))
         return self.A[-1][-1]
 
 
@@ -38,7 +39,7 @@ class Knapsack:
 for _ in range(t):
     n , W = map(int , raw_input().split())
     values = map(int , raw_input().split())
-    knap = Knapsack(values , W)
+    knap = Knapsack(values , values , W)
     print knap.getExpectedValue()
 """
 
@@ -46,9 +47,9 @@ for _ in range(t):
 if __name__ == "__main__":
     W = 12
     values = [1 , 6 , 9]
-    knap = Knapsack(values , W)
+    knap = Knapsack(values , values , W)
     print knap.getExpectedValue()
     W = 9
     values = [3 , 4 , 4 , 4 , 8]
-    knap = Knapsack(values , W)
+    knap = Knapsack(values , values , W)
     print knap.getExpectedValue()

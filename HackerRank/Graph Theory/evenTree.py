@@ -16,7 +16,7 @@ class cutTree:
     def findChildren(self , n):
         children = []
         for x in range(self.M):
-            if edges[x][1] == n:
+            if self.edges[x][1] == n:
                 children.append(self.edges[x][0])
                 childN = self.findChildren(self.edges[x][0])
                 for child in childN:

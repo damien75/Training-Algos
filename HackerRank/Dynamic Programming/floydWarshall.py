@@ -11,9 +11,25 @@
 #Then for k = 1..n, A[i][j] = min(A[i][j] , A[i][k] + A[k][j])
 
 class Floyd:
-    def __init__(self , graph , n):
+    def __init__(self , graph , edgesTo , n):
+        self.edgesTo = edgesTo
         self.graph = graph
         self.n = n
+
+    def shortestDistance2(self):
+        for k in range(self.n):
+            middle = self.graph[k]
+            for i in self.edgesTo[k]:
+                fromVertex = self.graph[i]
+                cost1 = fromVertex[k] #best cost to go from initial vertex to middle vertex
+                for j in range(self.n):
+                    if middle[j] is None: #impossible to go from middle vertex to end vertex
+                        continue
+                    if fromVertex[j] is not None:
+                        fromVertex[j] = min(fromVertex[j] , cost1 + middle[j])
+                    else:
+                        fromVertex[j] = cost1 + middle[j]
+                        self.edgesTo[j].add(i)
 
     def shortestDistance(self):
         for k in range(self.n):
@@ -53,8 +69,9 @@ if __name__ == "__main__":
     n = 4
     m = 5
     edges = [[0 , 5 , None , 24] , [None , 0 , None , 6] , [None , 7 , 0 , 4] , [None , None , None , 0]]
-    flo = Floyd(edges , n)
-    flo.shortestDistance()
+    edgesTo = [set([0]) , set([0 , 1 , 2]) , set([2]) , set([0 , 1 , 2 , 3])]
+    flo = Floyd(edges , edgesTo , n)
+    flo.shortestDistance2()
     q = 3
     fromTo = [(1 , 2) , (3 , 1) , (1 , 4)]
     for i in range(q):
@@ -69,14 +86,16 @@ if __name__ == "__main__":
         n , m = map(int , f.readline().split())
         #edges = [[None]*n]*n is slower
         edges = [[None for _ in range(n)] for _ in range(n)]
+        edgesTo = [set([i]) for i in range(n)]
         for _ in range(m):
             tail , head , weight = map(int , f.readline().split())
             edges[tail - 1][head - 1] = weight
+            edgesTo[head - 1].add(tail - 1)
         for i in range(n):
             edges[i][i] = 0
 
-        flo = Floyd(edges , n)
-        flo.shortestDistance()
+        flo = Floyd(edges , edgesTo , n)
+        flo.shortestDistance2()
         q = int(f.readline())
         for _ in range(q):
             fromVertex , toVertex = map(int , f.readline().split())

@@ -1,3 +1,5 @@
+#source Hackerrank / Algorithms / Search / Maximize Sum
+
 #input: array ar and integer M
 
 #goal: compute the max sum of elements of ar modulo M
