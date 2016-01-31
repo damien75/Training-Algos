@@ -6,7 +6,7 @@ The goal is to store this as ideas and to remember interesting observations from
 [HackerRank](HackerRank/)
 
   •[Dynamic Programming](HackerRank/Dynamic Programming/)  
-  
+
   ••[Bricks Game](HackerRank/Dynamic Programming/bricksGame.py)  
   ••[Candies](HackerRank/Dynamic Programming/candies.py)  
   ••[The Coin Change Problem](HackerRank/Dynamic Programming/coinChange.py)  
@@ -18,7 +18,7 @@ The goal is to store this as ideas and to remember interesting observations from
   ••[The Maximum Subarray](HackerRank/Dynamic Programming/maxSubArray.py)  
   ••[Red John Is Back](HackerRank/Dynamic Programming/redJohnIsBack.py)  
   ••[Stock Maximize](HackerRank/Dynamic Programming/stockMaximize.py)  
-  
+
   •[Graph Theory](HackerRank/Graph Theory/)
 
   ••[Djikstra: Shortest Reach 2](HackerRank/Graph Theory/DjikstraShortestPath.py)  
@@ -49,7 +49,9 @@ The goal is to store this as ideas and to remember interesting observations from
 
 [LeetCode](LeetCode/)
 
+  •[Abbreviations](LeetCode/abbreviation.py)
   •[Maximise Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)
+  •[Union Find](LeetCode/unionFind.py)
 
 [CareerCup](CareerCup/)
 
