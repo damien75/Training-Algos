@@ -49,8 +49,8 @@ The goal is to store this as ideas and to remember interesting observations from
 
 [LeetCode](LeetCode/)
 
-  •[Abbreviations](LeetCode/abbreviation.py)
-  •[Maximise Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)
+  •[Abbreviations](LeetCode/abbreviation.py)  
+  •[Maximise Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
   •[Union Find](LeetCode/unionFind.py)
 
 [CareerCup](CareerCup/)
