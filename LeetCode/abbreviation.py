@@ -6,7 +6,7 @@
 #given the current position we're at in the string, our current abbreviation and the count
 #for the last character in our current abbreviation
 
-#complexity: 0(2^n) because we see each possible case once in time and 0(2^n) in space
+#complexity: O(2^n) because we see each possible case once in time and 0(2^n) in space
 
 class Abbreviations:
     def __init__(self , word):

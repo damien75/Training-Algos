@@ -12,7 +12,7 @@
 #   if tempSum - k in hashtable: <-- in that case the sum from this index to the current index is k!!
 #       maxLength = max(maxLength , i - hashtable[tempSum - k])
 
-#complexity: 0(n) single scan in time and 0(n) in space
+#complexity: O(n) single scan in time and O(n) in space
 
 def maxLengthSubArrayToTarget(ar , target):
     tempSum = 0

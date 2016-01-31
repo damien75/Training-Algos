@@ -4,7 +4,7 @@
 
 #idea: Use a union find data structure and then output the number of connected components
 
-#complexity: 0(n^2) building data structure in worst case in time and 0(n) in space
+#complexity: O(n^2) building data structure in worst case in time and O(n) in space
 
 class UF:
     def __init__(self , n):

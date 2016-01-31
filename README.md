@@ -50,7 +50,8 @@ The goal is to store this as ideas and to remember interesting observations from
 [LeetCode](LeetCode/)
 
   •[Abbreviations](LeetCode/abbreviation.py)  
-  •[Maximise Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
+  •[Maximize Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
+  •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
   •[Union Find](LeetCode/unionFind.py)
 
 [CareerCup](CareerCup/)
