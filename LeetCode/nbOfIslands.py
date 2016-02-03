@@ -4,7 +4,7 @@
 
 #idea: use a union find structure to keep track of the nb of islands and connect them if necessary
 
-#complexity: O(k log n.m) in time and O(x.y) in space
+#complexity: O(k log n.m) in time and O(n.m) in space
 #Indeed, k operations on union find with n nodes has complexity of O(k log n)!!!
 
 from unionFind import UF
