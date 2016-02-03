@@ -52,6 +52,7 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Abbreviations](LeetCode/abbreviation.py)  
   •[Maximize Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
   •[Number of Islands 2](LeetCode/nbOfIslands.py)  
+  •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
   •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
   •[Union Find](LeetCode/unionFind.py)
 
