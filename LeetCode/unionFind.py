@@ -7,9 +7,13 @@
 #complexity: O(n^2) building data structure in worst case in time and O(n) in space
 
 class UF:
-    def __init__(self , n):
-        self.ids = [i for i in range(n)]
-        self.count = n
+    def __init__(self , n , defaultValue = False):
+        if defaultValue is not False:
+            self.ids = [defaultValue for _ in range(n)]
+            self.count = 0
+        else:
+            self.ids = [i for i in range(n)]
+            self.count = n
 
     def union(self , id1 , id2):
         i1 = self.ids[id1]
