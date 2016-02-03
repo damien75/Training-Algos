@@ -7,9 +7,13 @@
 #complexity: O(n^2) building data structure in worst case in time and O(n) in space
 
 class UF:
-    def __init__(self , n):
-        self.ids = [i for i in range(n)]
-        self.count = n
+    def __init__(self , n , defaultValue = False):
+        if defaultValue is not False:
+            self.ids = [defaultValue for _ in range(n)]
+            self.count = 0
+        else:
+            self.ids = [i for i in range(n)]
+            self.count = n
 
     def union(self , id1 , id2):
         i1 = self.ids[id1]
@@ -24,26 +28,27 @@ class UF:
         return self.ids[id1] == self.ids[id2]
 
 
-#Example 1:
-#     0          3
-#     |          |
-#     1 --- 2    4
-n = 5
-edges = [[0, 1], [1, 2], [3, 4]]
-#expect to return 2.
-uf = UF(n)
-for e in edges:
-    uf.union(e[0] , e[1])
-print uf.count
+if __name__ == '__main__':
+    #Example 1:
+    #     0          3
+    #     |          |
+    #     1 --- 2    4
+    n = 5
+    edges = [[0, 1], [1, 2], [3, 4]]
+    #expect to return 2.
+    uf = UF(n)
+    for e in edges:
+        uf.union(e[0] , e[1])
+    print uf.count
 
-#Example 2:
-#     0           4
-#     |           |
-#     1 --- 2 --- 3
-n = 5
-edges = [[0, 1], [1, 2], [2, 3], [3, 4]]
-#expect to return 1.
-uf = UF(n)
-for e in edges:
-    uf.union(e[0] , e[1])
-print uf.count
+    #Example 2:
+    #     0           4
+    #     |           |
+    #     1 --- 2 --- 3
+    n = 5
+    edges = [[0, 1], [1, 2], [2, 3], [3, 4]]
+    #expect to return 1.
+    uf = UF(n)
+    for e in edges:
+        uf.union(e[0] , e[1])
+    print uf.count
