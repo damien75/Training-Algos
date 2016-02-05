@@ -54,6 +54,7 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Count of Smaller Numbers After Self](LeetCode/countSmallerAfterSelf.py)  
   •[Longest Consecutive Sequence in Binary Tree](LeetCode/BTLongestSequence.py)  
   •[Maximize Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
+  •[Best Time to Buy And Sell Stock with Cooldown](LeetCode/maxStockWithCooldown.py)  
   •[Number of Islands 2](LeetCode/nbOfIslands.py)  
   •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
   •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
