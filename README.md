@@ -51,6 +51,7 @@ The goal is to store this as ideas and to remember interesting observations from
 
   •[Abbreviations](LeetCode/abbreviation.py)  
   •[Count of Smaller Numbers After Self](LeetCode/countSmallerAfterSelf.py)  
+  •[Longest Consecutive Sequence in Binary Tree](LeetCode/BTLongestSequence.py)  
   •[Maximize Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
   •[Number of Islands 2](LeetCode/nbOfIslands.py)  
   •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
