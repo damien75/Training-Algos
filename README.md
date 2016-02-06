@@ -56,6 +56,8 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Maximize Size of Subarray to Sum Up to Target](LeetCode/maxSizeSumToTarget.py)  
   •[Best Time to Buy And Sell Stock with Cooldown](LeetCode/maxStockWithCooldown.py)  
   •[Number of Islands 2](LeetCode/nbOfIslands.py)  
+  •[Range Sum Query - Immutable](LeetCode/immutableRangeSumQuery.py)  
+  •[Range Sum Query - Mutable](LeetCode/mutableRangeSumQuery.py)  
   •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
   •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
   •[Union Find](LeetCode/unionFind.py)
