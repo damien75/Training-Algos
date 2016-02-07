@@ -61,7 +61,9 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
   •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
   •[Smallest Rectangle Enclosing Black Pixels](LeetCode/smallestRectangleEnclosing.py)  
-  •[Union Find](LeetCode/unionFind.py)
+  •[Union Find](LeetCode/unionFind.py)  
+  •[Unique Word Abbreviation](LeetCode/abbreviateWord.py)  
+  •[Word Pattern II](LeetCode/wordPattern.py)
 
 [CareerCup](CareerCup/)
 
