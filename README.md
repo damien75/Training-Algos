@@ -60,6 +60,7 @@ The goal is to store this as ideas and to remember interesting observations from
   •[Range Sum Query - Mutable](LeetCode/mutableRangeSumQuery.py)  
   •[Remove Duplicate Letters](LeetCode/removeDuplicateLetters.py)  
   •[Shortest Distance from N Points in Graph](LeetCode/shortestDistanceFromNPoints.py)  
+  •[Smallest Rectangle Enclosing Black Pixels](LeetCode/smallestRectangleEnclosing.py)  
   •[Union Find](LeetCode/unionFind.py)
 
 [CareerCup](CareerCup/)
