@@ -8,7 +8,7 @@
 #the longest subsequence from A[0..i] and B[0..j]
 #We define LCS(i , j) as follows:
 #if i == 0 or j == 0: LCS(i , j) = 0
-#elif A[i] == A[j]: LCS(i , j) = LCS(i - 1 , j - 1) + A[i]
+#elif A[i] == B[j]: LCS(i , j) = LCS(i - 1 , j - 1) + A[i]
 #else: LCS(i , j) = max(LCS(i - 1 , j) , LCS(i , j - 1))
 
 def LCS(A , B):
