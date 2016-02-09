@@ -59,7 +59,6 @@ class MutableRangeSum:
                 return self.sumRange(i , j , root.right)
             else:
                 return self.sumRange(i , mid , root.left) + self.sumRange(mid + 1 , j , root.right)
-            root.sum = root.left.sum + root.right.sum
 
 #Example:
 nums = [1, 3, 5]
