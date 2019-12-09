@@ -17,4 +17,4 @@ jobs:
           python-version: '>3.5'
           architecture: x64
       - name: Unit Tests
-        run: python -m unittest -v
+        run: python setup.py nosetests --with-coverage

@@ -4,9 +4,11 @@ Training solutions to different algorithm problems from different sources
 
 The goal is to store this as ideas and to remember interesting observations from exercises, like optimizations useful and so on...
 
-## Build status
+## Build
 
 ![](https://github.com/damien75/Training-Algos/workflows/Algorithms/badge.svg)
+
+Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defined.
 
 ## [HackerRank](HackerRank)
 
