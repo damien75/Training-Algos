@@ -1,24 +1,29 @@
 # Training-Algos
+
 Training solutions to different algorithm problems from different sources
 
 The goal is to store this as ideas and to remember interesting observations from exercises, like optimizations useful and so on...
 
+## Build status
+
+![](https://github.com/damien75/Training-Algos/workflows/Algorithms/badge.svg)
+
 ## [HackerRank](HackerRank)
 
-* [Dynamic Programming](HackerRank/Dynamic Programming)
+* [Dynamic Programming](HackerRank/dynamic_programming)
 
-  * [Bricks Game](HackerRank/Dynamic Programming/bricksGame.py)
-  * [Candies](HackerRank/Dynamic Programming/candies.py)
-  * [The Coin Change Problem](HackerRank/Dynamic Programming/coinChange.py)
-  * [Floyd : City of Blinding Lights](HackerRank/Dynamic Programming/floydWarshall.py)
-  * [Grid Walking](HackerRank/Dynamic Programming/gridWalking.py)
-  * [Knapsack](HackerRank/Dynamic Programming/knapsack.py)
-  * [The Longest Common Subsequence](HackerRank/Dynamic Programming/longestCommonSubsequence.py)
-  * [The Longest Increasing Subsequence](HackerRank/Dynamic Programming/longestIncreasingSubSequence.py)
-  * [The Maximum Subarray](HackerRank/Dynamic Programming/maxSubArray.py)
-  * [Red John Is Back](HackerRank/Dynamic Programming/redJohnIsBack.py)
-  * [Stock Maximize](HackerRank/Dynamic Programming/stockMaximize.py)
-  * [Play With Words](HackerRank/Dynamic Programming/palindromSubsequences.py)
+  * [Bricks Game](HackerRank/dynamic_programming/bricks_game.py)
+  * [Candies](HackerRank/dynamic_programming/candies.py)
+  * [The Coin Change Problem](HackerRank/dynamic_programming/coinChange.py)
+  * [Floyd : City of Blinding Lights](HackerRank/dynamic_programming/floydWarshall.py)
+  * [Grid Walking](HackerRank/dynamic_programming/gridWalking.py)
+  * [Knapsack](HackerRank/dynamic_programming/knapsack.py)
+  * [The Longest Common Subsequence](HackerRank/dynamic_programming/longestCommonSubsequence.py)
+  * [The Longest Increasing Subsequence](HackerRank/dynamic_programming/longestIncreasingSubSequence.py)
+  * [The Maximum Subarray](HackerRank/dynamic_programming/maxSubArray.py)
+  * [Red John Is Back](HackerRank/dynamic_programming/redJohnIsBack.py)
+  * [Stock Maximize](HackerRank/dynamic_programming/stockMaximize.py)
+  * [Play With Words](HackerRank/dynamic_programming/palindromSubsequences.py)
 
 * [Graph Theory](HackerRank/Graph Theory)
 
