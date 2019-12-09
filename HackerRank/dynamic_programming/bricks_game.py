@@ -9,7 +9,7 @@ class MaxScore(object):
 
     Goal: maximize nb of collected integers in a one to one game where each player can take 1,2 or 3 numbers every time
 
-    idea: go through array from right to left
+    Idea: go through array from right to left
     store the backwards sum and the max score we can get if we start at a given position
     when we get to position i, we have 3 cases:
     1. if we take only 1 brick then our score is bricks[i] + reversedSum[i + 1] - maxScore[i + 1]
