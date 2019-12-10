@@ -16,8 +16,9 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 
   * [Bricks Game](HackerRank/dynamic_programming/bricks_game.py)
   * [Candies](HackerRank/dynamic_programming/candies.py)
-  * [The Coin Change Problem](HackerRank/dynamic_programming/coinChange.py)
-  * [Floyd : City of Blinding Lights](HackerRank/dynamic_programming/floydWarshall.py)
+  * [The Coin Change Problem](HackerRank/dynamic_programming/coin_change.py)
+  * [Coin on the Table](HackerRank/dynamic_programming/coin_on_the_table.py)
+  * [Floyd : City of Blinding Lights](HackerRank/dynamic_programming/floyd_warshall.py)
   * [Grid Walking](HackerRank/dynamic_programming/gridWalking.py)
   * [Knapsack](HackerRank/dynamic_programming/knapsack.py)
   * [The Longest Common Subsequence](HackerRank/dynamic_programming/longestCommonSubsequence.py)
@@ -54,6 +55,11 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Strings](HackerRank/Strings)
 
   * [Save Humanity](HackerRank/Strings/saveHumanity.py)
+
+## [Interviews](interviews)
+
+* [Bookings Availabilities](interviews/bookings_availabilities.py)
+* [Mud Walls](interviews/mud_wall.py)
 
 ## [LeetCode](LeetCode)
 

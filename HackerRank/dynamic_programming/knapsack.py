@@ -1,55 +1,51 @@
-#source Hackerrank / Algorithms / Dynamic Programming / Knapsack
+from typing import List
 
-#input: max capacity W, and int values
-
-#goal: compute the max sum not exceeding W using only elements in the given list
-
-#idea: when W = 0 => expected value = 0
-#when len(values) = 0 => expected value = 0
-#for cap w and first i values:
-#   if values[i] <= cap:
-#       expectedValue = max(expectedValue[i - 1][cap] , expectedValue[i][cap - values[i]] + values[i])
 
 class Knapsack:
-    def __init__(self , values , weights , maxCapacity):
-        self.A = []
+    """
+    source Hackerrank / Algorithms / Dynamic Programming / Knapsack
+
+    Input: max capacity W, and int values
+
+    Goal: compute the max sum not exceeding W using only elements in the given list
+
+    Idea: when W = 0 => expected value = 0
+    when len(values) = 0 => expected value = 0
+    for cap w and first i values:
+       if values[i] <= cap:
+           expectedValue = max(expectedValue[i - 1][cap] , expectedValue[i][cap - values[i]] + values[i])
+    """
+    def __init__(self, values: List[int], weights: List[int], max_capacity: int):
+        self.array = []
         self.values = values
         self.weights = weights
-        self.W = maxCapacity
+        self.max_capacity = max_capacity
 
-    def getExpectedValue(self):
-        for i in range(len(self.values) + 1):        #add 0 when capacity is equal to 0
-            self.A.append([0])
-        for i in range(1 , self.W + 1):              #add 0 when there are no available values
-            self.A[0].append(0)
+    def get_expected_value(self) -> int:
+        for i in range(len(self.values) + 1):  # add 0 when capacity is equal to 0
+            self.array.append([0])
+        for i in range(1, self.max_capacity + 1):  # add 0 when there are no available values
+            self.array[0].append(0)
 
-        for i in range(1 , len(self.values) + 1):
+        for i in range(1, len(self.values) + 1):
             j = i - 1
-            for cap in range(1 , self.W + 1):
+            for cap in range(1, self.max_capacity + 1):
                 if self.values[j] > cap:
-                    self.A[i].append(self.A[i - 1][cap])
+                    self.array[i].append(self.array[i - 1][cap])
                 else:
-                    self.A[i].append(max(self.A[i - 1][cap] , self.A[i][cap - self.weights[j]] + self.values[j]))
-        return self.A[-1][-1]
+                    self.array[i].append(max(self.array[i - 1][cap],
+                                             self.array[i][cap - self.weights[j]] + self.values[j]))
+        return self.array[-1][-1]
 
+    @staticmethod
+    def read_and_print_from_hackerrank():
+        """
+        Utility function to read from hackerrank stdin and return to stdout
+        """
+        t = int(input())
 
-#Read input from Hackerrank
-"""t = input()
-
-for _ in range(t):
-    n , W = map(int , raw_input().split())
-    values = map(int , raw_input().split())
-    knap = Knapsack(values , values , W)
-    print knap.getExpectedValue()
-"""
-
-#Custom Inputs
-if __name__ == "__main__":
-    W = 12
-    values = [1 , 6 , 9]
-    knap = Knapsack(values , values , W)
-    print knap.getExpectedValue()
-    W = 9
-    values = [3 , 4 , 4 , 4 , 8]
-    knap = Knapsack(values , values , W)
-    print knap.getExpectedValue()
+        for _ in range(t):
+            n, max_capacity = map(int, input().split())
+            values = list(map(int, input().split()))
+            knap = Knapsack(values, values, max_capacity)
+            print(knap.get_expected_value())
