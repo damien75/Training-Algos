@@ -1,12 +1,14 @@
 from logging import getLogger
+from os import environ
 from os.path import realpath, dirname, join
 from time import time
 from typing import List
-from unittest import TestCase
+from unittest import skipUnless, TestCase
 
 from HackerRank.dynamic_programming.floyd_warshall import Floyd
 
 
+@skipUnless(environ.get('RUN_EXPENSIVE_TESTS') is not None, 'this test takes around 30s')
 class FloydWarshallTest(TestCase):
     def setUp(self) -> None:
         self.logger = getLogger(f'{__name__}.{__class__.__qualname__}')
