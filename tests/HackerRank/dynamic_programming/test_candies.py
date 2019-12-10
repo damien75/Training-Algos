@@ -10,4 +10,4 @@ class CandiesTest(TestCase):
         self.instance = MinimumNumberOfCandies()
 
     def test_min_nb_candies_to_buy(self):
-        self.assertEqual(self.instance.min_nb_candies(self.n_students, self.grades), 4)
+        self.assertEqual(4, self.instance.min_nb_candies(self.n_students, self.grades))

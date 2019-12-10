@@ -25,7 +25,7 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 2, 4, 7]
         stone_segment_height = [4, 5, 7, 11]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 9)
+        self.assertEqual(9, self.instance.max_height(stone_segment_positions, stone_segment_height))
 
     def test_mud_wall_max_height_for_wall_2(self):
         """
@@ -39,7 +39,7 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 3, 7]
         stone_segment_height = [4, 3, 3]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 5)
+        self.assertEqual(5, self.instance.max_height(stone_segment_positions, stone_segment_height))
 
     def test_mud_wall_max_height_for_wall_3(self):
         """
@@ -54,7 +54,7 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 2, 11]
         stone_segment_height = [1, 2, 1]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 6)
+        self.assertEqual(6, self.instance.max_height(stone_segment_positions, stone_segment_height))
 
     def test_mud_wall_max_height_for_wall_4(self):
         """
@@ -69,7 +69,7 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 2, 11]
         stone_segment_height = [2, 1, 2]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 6)
+        self.assertEqual(6, self.instance.max_height(stone_segment_positions, stone_segment_height))
 
     def test_mud_wall_max_height_for_wall_5(self):
         """
@@ -85,7 +85,7 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 2, 11]
         stone_segment_height = [2, 1, 4]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 7)
+        self.assertEqual(7, self.instance.max_height(stone_segment_positions, stone_segment_height))
 
     def test_mud_wall_max_height_for_wall_6(self):
         """
@@ -105,4 +105,4 @@ class MudWallTest(TestCase):
         """
         stone_segment_positions = [1, 2, 11]
         stone_segment_height = [2, 1, 11]
-        self.assertEqual(self.instance.max_height(stone_segment_positions, stone_segment_height), 9)
+        self.assertEqual(9, self.instance.max_height(stone_segment_positions, stone_segment_height))

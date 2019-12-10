@@ -10,6 +10,6 @@ class BricksGameTest(TestCase):
     def test_get_max_score(self):
         test_n = 5
         test_bricks = [999, 1, 1, 1, 0]
-        self.assertEqual(self.bricks_game_instance.max_score(test_n, test_bricks), 1001)
+        self.assertEqual(1001, self.bricks_game_instance.max_score(test_n, test_bricks))
         test_bricks_2 = [0, 1, 1, 1, 999]
-        self.assertEqual(self.bricks_game_instance.max_score(test_n, test_bricks_2), 999)
+        self.assertEqual(999, self.bricks_game_instance.max_score(test_n, test_bricks_2))
