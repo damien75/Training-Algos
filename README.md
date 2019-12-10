@@ -30,7 +30,7 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 
 * [Graph Theory](HackerRank/graph_theory)
 
-  * [Djikstra: Shortest Reach 2](HackerRank/graph_theory/DjikstraShortestPath.py)
+  * [Djikstra: Shortest Reach 2](HackerRank/graph_theory/djikstra_shortest_path.py)
   * [Even Tree](HackerRank/graph_theory/evenTree.py)
   * [Kruskal (MST): Really Special Subtree](HackerRank/graph_theory/KruskalMST.py)
   * [Breadth First Search: Shortest Reach](HackerRank/graph_theory/shortestReach.py)
