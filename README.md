@@ -28,12 +28,12 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
   * [Stock Maximize](HackerRank/dynamic_programming/stockMaximize.py)
   * [Play With Words](HackerRank/dynamic_programming/palindromSubsequences.py)
 
-* [Graph Theory](HackerRank/Graph Theory)
+* [Graph Theory](HackerRank/graph_theory)
 
-  * [Djikstra: Shortest Reach 2](HackerRank/Graph Theory/DjikstraShortestPath.py)
-  * [Even Tree](HackerRank/Graph Theory/evenTree.py)
-  * [Kruskal (MST): Really Special Subtree](HackerRank/Graph Theory/KruskalMST.py)
-  * [Breadth First Search: Shortest Reach](HackerRank/Graph Theory/shortestReach.py)
+  * [Djikstra: Shortest Reach 2](HackerRank/graph_theory/DjikstraShortestPath.py)
+  * [Even Tree](HackerRank/graph_theory/evenTree.py)
+  * [Kruskal (MST): Really Special Subtree](HackerRank/graph_theory/KruskalMST.py)
+  * [Breadth First Search: Shortest Reach](HackerRank/graph_theory/shortestReach.py)
 
 * [Search](HackerRank/Search)
 
