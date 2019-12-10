@@ -31,19 +31,19 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Graph Theory](HackerRank/graph_theory)
 
   * [Djikstra: Shortest Reach 2](HackerRank/graph_theory/djikstra_shortest_path.py)
-  * [Even Tree](HackerRank/graph_theory/evenTree.py)
-  * [Kruskal (MST): Really Special Subtree](HackerRank/graph_theory/KruskalMST.py)
-  * [Breadth First Search: Shortest Reach](HackerRank/graph_theory/shortestReach.py)
+  * [Even Tree](HackerRank/graph_theory/even_tree.py)
+  * [Kruskal (MST): Really Special Subtree](HackerRank/graph_theory/kruskal_mst.py)
+  * [Breadth First Search: Shortest Reach](HackerRank/graph_theory/shortest_reach.py)
 
-* [Search](HackerRank/Search)
+* [Search](HackerRank/search)
 
-  * [Connected Cells in a Grid](HackerRank/Search/connectedCellsInGrid.py)
-  * [Cut The Tree](HackerRank/Search/cutTheTree.py)
-  * [Grid Search](HackerRank/Search/gridSearch.py)
-  * [3 Integers Sum Up To Target](HackerRank/Search/integersSumToTarget.py)
-  * [Maximize Sum](HackerRank/Search/maxModSum.py)
-  * [Missing Numbers](HackerRank/Search/missingNumbers.py)
-  * [Snakes And Ladders](HackerRank/Search/snakesAndLadders.py)
+  * [Connected Cells in a Grid](HackerRank/search/connected_cells_in_grid.py)
+  * [Cut The Tree](HackerRank/search/cutTheTree.py)
+  * [Grid Search](HackerRank/search/gridSearch.py)
+  * [3 Integers Sum Up To Target](HackerRank/search/integersSumToTarget.py)
+  * [Maximize Sum](HackerRank/search/maxModSum.py)
+  * [Missing Numbers](HackerRank/search/missingNumbers.py)
+  * [Snakes And Ladders](HackerRank/search/snakesAndLadders.py)
 
 * [Sorting](HackerRank/Sorting)
 
