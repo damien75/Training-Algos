@@ -6,7 +6,7 @@ version = os.environ.get('PACKAGE_VERSION', '0.0.0')
 INSTALL_REQUIRES = []
 
 TEST_REQUIRES = [
-    'coverage'
+    'nose'
 ]
 
 EXTRAS_REQUIRE = {}
