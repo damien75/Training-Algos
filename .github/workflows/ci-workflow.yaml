@@ -22,4 +22,4 @@ jobs:
                 pip install nose
                 pip install coverage
       - name: Unit Tests
-        run: python setup.py nosetests --with-coverage
+        run: python setup.py nosetests --cover-package HackerRank --with-coverage
