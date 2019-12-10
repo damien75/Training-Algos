@@ -19,7 +19,7 @@ class ExploreIsland:
         self.width = len(self.grid[0])
         self.visited = [[False for _ in range(self.width)] for _ in range(self.height)]
 
-    def get_neighbors(self, position: Tuple[int, int]):
+    def get_neighbors(self, position: Tuple[int, int]) -> List[Tuple[int, int]]:
         i, j = position
         neighbors = []
         if i > 0:
@@ -40,7 +40,7 @@ class ExploreIsland:
             neighbors.append((i, j + 1))
         return neighbors
 
-    def size_of_island_from(self, i, j):
+    def size_of_island_from(self, i, j) -> int:
         size = 0
         to_visit = set()
         to_visit.add((i, j))
@@ -55,7 +55,7 @@ class ExploreIsland:
                     to_visit.add(neighbor)
         return size
 
-    def size_biggest_island(self):
+    def size_biggest_island(self) -> int:
         biggest = 0
         for i in range(self.height):
             for j in range(self.width):
