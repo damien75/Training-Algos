@@ -21,12 +21,12 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
   * [Floyd : City of Blinding Lights](HackerRank/dynamic_programming/floyd_warshall.py)
   * [Grid Walking](HackerRank/dynamic_programming/gridWalking.py)
   * [Knapsack](HackerRank/dynamic_programming/knapsack.py)
-  * [The Longest Common Subsequence](HackerRank/dynamic_programming/longestCommonSubsequence.py)
-  * [The Longest Increasing Subsequence](HackerRank/dynamic_programming/longestIncreasingSubSequence.py)
-  * [The Maximum Subarray](HackerRank/dynamic_programming/maxSubArray.py)
-  * [Red John Is Back](HackerRank/dynamic_programming/redJohnIsBack.py)
-  * [Stock Maximize](HackerRank/dynamic_programming/stockMaximize.py)
-  * [Play With Words](HackerRank/dynamic_programming/palindromSubsequences.py)
+  * [The Longest Common Subsequence](HackerRank/dynamic_programming/longest_common_subsequence.py)
+  * [The Longest Increasing Subsequence](HackerRank/dynamic_programming/longest_increasing_subsequence.py)
+  * [The Maximum Subarray](HackerRank/dynamic_programming/max_sub_array.py)
+  * [Red John Is Back](HackerRank/dynamic_programming/red_john_is_back.py)
+  * [Stock Maximize](HackerRank/dynamic_programming/maximize_stock.py)
+  * [Play With Words](HackerRank/dynamic_programming/palindrome_subsequences.py)
 
 * [Graph Theory](HackerRank/graph_theory)
 
