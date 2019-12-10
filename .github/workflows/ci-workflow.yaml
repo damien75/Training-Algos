@@ -17,6 +17,8 @@ jobs:
           python-version: '>3.5'
           architecture: x64
       - name: Install dependencies
-        run: python setup.py install
+        run: |
+                python setup.py install
+                pip install nose
       - name: Unit Tests
         run: python setup.py nosetests --with-coverage

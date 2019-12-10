@@ -5,10 +5,6 @@ version = os.environ.get('PACKAGE_VERSION', '0.0.0')
 
 INSTALL_REQUIRES = []
 
-TEST_REQUIRES = [
-    'nose'
-]
-
 EXTRAS_REQUIRE = {}
 
 
@@ -21,7 +17,6 @@ def setup_package():
         packages=find_packages(exclude=['tests', '*.tests', '*.tests.*']),
         install_requires=INSTALL_REQUIRES,
         extras_require=EXTRAS_REQUIRE,
-        tests_require=TEST_REQUIRES,
         test_suite='nose.collector'
     )
 
