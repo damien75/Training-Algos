@@ -30,7 +30,7 @@ class SnakesAndLaddersTest(TestCase):
                     jumps[s] = e
                 results.append(self.instance.min_number_of_toss(jumps, self.top))
 
-        self.logger.info(f'Execution time(s): {time() - start}')
+        self.logger.info(f'Execution time(s) for input file {input_file}: {time() - start}')
         with open(join(self.resources_dir, output_file)) as f:
             success = True
             for i in range(len(results)):

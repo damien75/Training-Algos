@@ -38,23 +38,23 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Search](HackerRank/search)
 
   * [Connected Cells in a Grid](HackerRank/search/connected_cells_in_grid.py)
-  * [Cut The Tree](HackerRank/search/cutTheTree.py)
-  * [Grid Search](HackerRank/search/gridSearch.py)
-  * [3 Integers Sum Up To Target](HackerRank/search/integersSumToTarget.py)
-  * [Maximize Sum](HackerRank/search/maxModSum.py)
-  * [Missing Numbers](HackerRank/search/missingNumbers.py)
-  * [Snakes And Ladders](HackerRank/search/snakesAndLadders.py)
+  * [Cut The Tree](HackerRank/search/cut_the_tree.py)
+  * [Grid Search](HackerRank/search/grid_search.py)
+  * [3 Integers Sum Up To Target](HackerRank/search/integers_sum_to_target.py)
+  * [Maximize Sum](HackerRank/search/max_mod_sum.py)
+  * [Missing Numbers](HackerRank/search/missing_numbers.py)
+  * [Snakes And Ladders](HackerRank/search/snakes_and_ladders.py)
 
-* [Sorting](HackerRank/Sorting)
+* [Sorting](HackerRank/sorting)
 
-  * [Bigger is Greater](HackerRank/Sorting/biggerIsGreater.py)
-  * [Dutch Flag Problem](HackerRank/Sorting/dutchFlagProblem.py)
-  * [Radix Sort](HackerRank/Sorting/lsdRadixSort.py)
-  * [Quick Sort](HackerRank/Sorting/quickSort.py)
+  * [Bigger is Greater](HackerRank/sorting/bigger_is_greater.py)
+  * [Dutch Flag Problem](HackerRank/sorting/dutch_flag_problem.py)
+  * [Radix Sort](HackerRank/sorting/lsd_radix_sort.py)
+  * [Quick Sort](HackerRank/sorting/quick_sort.py)
 
-* [Strings](HackerRank/Strings)
+* [Strings](HackerRank/strings)
 
-  * [Save Humanity](HackerRank/Strings/saveHumanity.py)
+  * [Save Humanity](HackerRank/strings/save_humanity.py)
 
 ## [Interviews](interviews)
 
