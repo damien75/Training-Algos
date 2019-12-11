@@ -22,6 +22,6 @@ jobs:
                 pip install nose
                 pip install coverage
       - name: Unit Tests
-        run: python setup.py nosetests --cover-package HackerRank --with-coverage
+        run: python setup.py nosetests --cover-package HackerRank --cover-package CareerCup --cover-package interviews --with-coverage
         env:
           RUN_EXPENSIVE_TESTS: True
