@@ -77,7 +77,7 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Smallest Rectangle Enclosing Black Pixels](LeetCode/smallest_rectangle_enclosing.py)
 * [Union Find](LeetCode/union_find.py)
 * [Unique Word Abbreviation](LeetCode/abbreviate_word.py)
-* [Word Pattern II](LeetCode/wordPattern.py)
+* [Word Pattern II](LeetCode/word_pattern.py)
 
 ## [CareerCup](CareerCup)
 
