@@ -3,10 +3,8 @@ name: Algorithms
 on: [push]
 
 jobs:
-  build:
-    # Job name is Unit Tests
-    name: Unit Tests
-    # This job runs on Linux
+  python:
+    name: Python Unit Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout branch for build
@@ -25,3 +23,16 @@ jobs:
         run: python setup.py nosetests --cover-package CareerCup,HackerRank,interviews --with-coverage
         env:
           RUN_EXPENSIVE_TESTS: True
+
+  go:
+    name: GoLang Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch for build
+        uses: actions/checkout@master
+      - name: Setup python version
+        uses: actions/setup-go@v1
+        with:
+          go-version: '>1.12'
+      - name: Unit Tests
+        run: go test -json ./...

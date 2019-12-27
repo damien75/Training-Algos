@@ -43,6 +43,9 @@ func buildToSeeMap(wordParts []string) (WordPartsToSeeAndPartsLength, error) {
 				"at least 2 different lengths: %d and %d", substrLength, len(w))
 		}
 	}
+	if substrLength < 0 {
+		return WordPartsToSeeAndPartsLength{}, fmt.Errorf("empty substring slice")
+	}
 	return WordPartsToSeeAndPartsLength{wordPartsToSee: wordPartsToSee, subStrLength: substrLength}, nil
 }
 
