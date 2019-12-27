@@ -55,11 +55,19 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Strings](HackerRank/strings)
 
   * [Save Humanity](HackerRank/strings/save_humanity.py)
+  * [Birthday Candles](go/src/hackerrank/candles.go)
+    > GoLang
 
 ## [Interviews](interviews)
 
 * [Bookings Availabilities](interviews/bookings_availabilities.py)
 * [Mud Walls](interviews/mud_wall.py)
+* [Graph for celebrity](interviews/celebrity_graph.py)
+* [Flight Schedule](interviews/flight_schedule.py)
+* [Substring Concatenation](go/src/interviews/substring_concatenation.go)
+  > GoLang
+* [Circles obstructing path](go/src/interviews/circles_obstruct_path.go)
+  > GoLang
 
 ## [LeetCode](LeetCode)
 
