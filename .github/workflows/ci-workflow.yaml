@@ -25,14 +25,17 @@ jobs:
           RUN_EXPENSIVE_TESTS: True
 
   go:
-    name: GoLang Unit Tests
+    name: Go   ${{ matrix.go }} Unit Tests
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go: ['1.12.x', '1.13.x', '1.14beta1']
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@master
       - name: Setup go version
         uses: actions/setup-go@v1
         with:
-          go-version: '1.14beta1'
+          go-version: ${{ matrix.go }}
       - name: Unit Tests
         run: go test -v ./...
