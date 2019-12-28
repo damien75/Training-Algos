@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="go test careercup package" type="GoTestRunConfiguration" factoryName="Go Test">
+  <configuration default="false" name="go test GoLang Tour package" type="GoTestRunConfiguration" factoryName="Go Test">
     <module name="Training-Algos" />
     <working_directory value="$PROJECT_DIR$/go/src/interviews" />
     <framework value="gotest" />
     <kind value="PACKAGE" />
-    <package value="careercup" />
+    <package value="tourgolang" />
     <directory value="$PROJECT_DIR$/" />
     <filePath value="$PROJECT_DIR$/" />
     <method v="2" />

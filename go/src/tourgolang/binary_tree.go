@@ -1,4 +1,4 @@
-package careercup
+package tourgolang
 
 import (
 	"fmt"
