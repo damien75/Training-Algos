@@ -89,9 +89,9 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 
 ## [CareerCup](CareerCup)
 
-* [Burst balloons with special rule regarding neighbor balloons to maximize output](CareerCup/burstBalloons.py)
-* [Check if string is concatenation of given strings](CareerCup/concatenationInSet.py)
+* [Burst balloons with special rule regarding neighbor balloons to maximize output](CareerCup/burst_balloons.py)
+* [Check if string is concatenation of given strings](CareerCup/concatenation_in_set.py)
 * [Return integer in base -2](CareerCup/negabinary.py)
-* [Return all possible subets of given set](CareerCup/powerSet.py)
-* [Vertical Binary Tree Traversal](CareerCup/sideViewTree.py)
-* [Sum k elements from list to get to target](CareerCup/sumOfElementsToTarget.py)
+* [Return all possible subets of given set](CareerCup/power_set.py)
+* [Vertical Binary Tree Traversal](CareerCup/sideView_tree.py)
+* [Sum k elements from list to get to target](CareerCup/sumOfElements_to_target.py)
