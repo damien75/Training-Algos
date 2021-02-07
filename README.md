@@ -93,5 +93,5 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
 * [Check if string is concatenation of given strings](CareerCup/concatenation_in_set.py)
 * [Return integer in base -2](CareerCup/negabinary.py)
 * [Return all possible subets of given set](CareerCup/power_set.py)
-* [Vertical Binary Tree Traversal](CareerCup/sideView_tree.py)
-* [Sum k elements from list to get to target](CareerCup/sumOfElements_to_target.py)
+* [Vertical Binary Tree Traversal](CareerCup/side_view_tree.py)
+* [Sum k elements from list to get to target](CareerCup/sum_of_elements_to_target.py)
