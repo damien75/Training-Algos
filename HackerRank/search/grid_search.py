@@ -10,7 +10,7 @@ class GridSearch(object):
     Goal: Check if small grid is in the big one
 
     Idea: look for the first line of the small grid in the big one
-    in that case get the index of the correspondance and check if the following lines match
+    in that case get the index of the correspondence and check if the following lines match
     """
 
     @staticmethod

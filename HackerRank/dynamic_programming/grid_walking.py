@@ -83,9 +83,9 @@ class GridWaling(object):
         """
         Utility function to read from hackerrank stdin and return to stdout
         """
-        T = int(input())
+        t = int(input())
 
-        for _ in range(T):
+        for _ in range(t):
             n, m = map(int, input().split())
             x = list(map(int, input().split()))  # starting point
             grid = list(map(int, input().split()))  # dimensions

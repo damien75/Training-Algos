@@ -30,7 +30,7 @@ class Floyd:
                     if middle[j] is None:  # impossible to go from middle vertex to end vertex
                         continue
                     if from_vertex[j] is not None:
-                        from_vertex[j] = min(from_vertex[j] , cost1 + middle[j])
+                        from_vertex[j] = min(from_vertex[j], cost1 + middle[j])
                     else:
                         from_vertex[j] = cost1 + middle[j]
                         self.edges_to[j].add(i)
@@ -46,7 +46,7 @@ class Floyd:
                 for j in range(self.n):
                     if middle[j] is None:  # impossible to go from middle vertex to end vertex
                         continue
-                    from_vertex[j] = min(from_vertex[j] , cost1 + middle[j]) or cost1 + middle[j]
+                    from_vertex[j] = min(from_vertex[j], cost1 + middle[j]) or cost1 + middle[j]
 
     def shortest_distance_between(self, from_vertex: int, to_vertex: int) -> int:
         return self.graph[from_vertex][to_vertex]

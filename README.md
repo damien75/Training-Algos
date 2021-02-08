@@ -19,7 +19,7 @@ Tests are executed from the [workflow](.github/workflows/ci-workflow.yaml) defin
   * [The Coin Change Problem](HackerRank/dynamic_programming/coin_change.py)
   * [Coin on the Table](HackerRank/dynamic_programming/coin_on_the_table.py)
   * [Floyd : City of Blinding Lights](HackerRank/dynamic_programming/floyd_warshall.py)
-  * [Grid Walking](HackerRank/dynamic_programming/gridWalking.py)
+  * [Grid Walking](HackerRank/dynamic_programming/grid_walking.py)
   * [Knapsack](HackerRank/dynamic_programming/knapsack.py)
   * [The Longest Common Subsequence](HackerRank/dynamic_programming/longest_common_subsequence.py)
   * [The Longest Increasing Subsequence](HackerRank/dynamic_programming/longest_increasing_subsequence.py)

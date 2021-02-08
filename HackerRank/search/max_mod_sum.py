@@ -90,7 +90,7 @@ class MaxModuloSum(object):
 
     Goal: compute the max sum of elements of ar modulo M
 
-    Idea: construct a previx sum st prefix[i] = sum(ar[:i]) %M
+    Idea: construct a prefix sum st prefix[i] = sum(ar[:i]) %M
     we also have sum(ar[a..i]) = (prefix[i] - prefix[a]) %M
     we want to choose a st prefix[a] is bigger than prefix[i] but the smallest possible, so that the diff % M
     will be close to M

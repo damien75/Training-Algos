@@ -12,10 +12,10 @@ class ImmutableRangeSum:
 
     complexity: O(n) in time to store the sums and then constant lookup for each call to sumRange and O(n) in space
     """
-    def __init__(self , ar: List[int]):
+    def __init__(self, ar: List[int]):
         self.leftSums = [0 for _ in range(len(ar))]
         self.leftSums[0] = ar[0]
-        for i in range(1 , len(ar)):
+        for i in range(1, len(ar)):
             self.leftSums[i] = self.leftSums[i - 1] + ar[i]
 
     def sum_range(self, i, j):

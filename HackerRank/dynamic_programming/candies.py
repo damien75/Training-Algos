@@ -23,7 +23,7 @@ class MinimumNumberOfCandies(object):
         left_grade = rating[0]
         right_grade = rating[-1]
 
-        for i in range(1 , n):
+        for i in range(1, n):
             j = n - i - 1
             if rating[i] > left_grade:
                 left[i] = left[i - 1] + 1
@@ -32,7 +32,7 @@ class MinimumNumberOfCandies(object):
                 right[j] = right[j + 1] + 1
             right_grade = rating[j]
 
-        return sum(max(left[i] , right[i]) for i in range(n))
+        return sum(max(left[i], right[i]) for i in range(n))
 
     def read_and_print_from_hackerrank(self):
         """

@@ -25,7 +25,7 @@ class PatternRecognition:
             key = self.pattern[pattern_index]
             for i in range(word_index + 1, len(self.word)):  # for each possible length of substring
                 cur = self.word[word_index: i]
-                if cur not in self.s and key not in self.h:  # if we have not alredy seen this association, try it
+                if cur not in self.s and key not in self.h:  # if we have not already seen this association, try it
                     self.h[key] = cur
                     self.s.add(cur)
                     if self.word_follows_pattern(i + 1, pattern_index + 1):  # if this works down the line, return True
